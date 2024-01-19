@@ -4,7 +4,6 @@ import java.util.ArrayList;
 
 public class Computer {
     // Comment from class
-    // Trying to avoid create a new or initiate a new ArrayList at top of the class (ex: line 9)
     // Prefer to have a new ArrayList in the constructor
     public ArrayList<Game> installedGames;
     PowerSupply powerSupply;
