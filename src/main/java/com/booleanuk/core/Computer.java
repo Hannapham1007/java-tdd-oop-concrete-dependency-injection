@@ -22,17 +22,14 @@ public class Computer {
         this.powerSupply.turnOn();
     }
 
-    public void installGame(String nameGame) {
-        Game game = new Game(nameGame);
+    public void installGame(Game game) {
         this.installedGames.add(game);
 
     }
-    public String playGame(String nameGame) {
-        for(Game game : this.installedGames) {
-            if (game.name.equals(nameGame)) {
-                return game.start();
-            }
-        }
+    public String playGame(Game game) {
+       if(this.installedGames.contains(game)){
+           return game.start();
+       }
         return "Game not installed";
     }
     }
